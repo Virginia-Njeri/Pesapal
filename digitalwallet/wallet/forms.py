@@ -1,7 +1,7 @@
 from ast import Load
 from dataclasses import field
 from django import forms
-from .models import  Account, Currency, Customer, Loan, Notifications, Receipt, Reward, Third_Party, Transaction, Wallet 
+from .models import  Account, Card, Currency, Customer, Loan, Notifications, Receipt, Reward, Third_Party, Transaction, Wallet 
 
 class RegisterCustomer(forms.ModelForm):
     class Meta:
@@ -35,7 +35,7 @@ class RegisterTransactions(forms.ModelForm):
 
 class Registercard(forms.ModelForm):
     class Meta:
-        model=Account
+        model=Card
         fields="__all__" 
 
 class RegisterLoan(forms.ModelForm):
@@ -66,7 +66,7 @@ class RegisterReward(forms.ModelForm):
     class Meta:
         model = Reward
         fields="__all__" 
-        
+
 
 
 

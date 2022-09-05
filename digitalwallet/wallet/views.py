@@ -8,7 +8,7 @@ def register_customer(request):
 
 
 def register_account(request):
-    vargy=RegisterReward()
+    vargy=RegisterAccount()
     return render(request,"register_wallet.html",{"form":vargy})
 
 
