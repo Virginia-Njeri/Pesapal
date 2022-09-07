@@ -2,7 +2,7 @@ from django.contrib import admin
 # Register your models here.
 # import email
 from django.contrib import admin
-from .models import Customer,Account,Transaction,Third_Party,Wallet,Currency,Notifications,Card,Reward,Receipt,Loan
+from .models import Customer,Account,Transaction,ThirdParty,Wallet,Currency,Notifications,Card,Reward,Receipt,Loan
 
 # Register your models here.
 class CustomerAdmin(admin.ModelAdmin):
@@ -29,10 +29,10 @@ class CardAdmin(admin.ModelAdmin):
     list_display=("issue_date","card_name","card_number")
     search_fields=("issue_date","card_name","card_number")
 admin.site.register(Card,CardAdmin)
-class Third_partyAdmin(admin.ModelAdmin):
+class ThirdPartyAdmin(admin.ModelAdmin):
     list_display=("name","id","type","transaction_account","account","currency")
     search_fields=("name","id","type","transaction_account","account","currency")
-admin.site.register(Third_Party,Third_partyAdmin)
+admin.site.register(ThirdParty,ThirdPartyAdmin)
 class NotificationsAdmin(admin.ModelAdmin):
     list_display=("transaction","transaction_id","transaction_amount","customer_id")
     search_fields=("transaction","transaction_id","transaction_amount","customer_id")

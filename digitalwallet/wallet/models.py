@@ -3,6 +3,7 @@ from django.db import models
 
 
 
+
 # from requests import delete
 
 class Customer(models.Model):
@@ -79,7 +80,7 @@ class Card(models.Model):
     account = models.ForeignKey(Account, on_delete=models.CASCADE)
     issuer = models.CharField(max_length=30)
 
-class Third_Party(models.Model):
+class ThirdParty(models.Model):
     name = models.CharField(max_length=15)
     id = models.CharField(max_length=8)
     type = models.CharField(max_length=6)
@@ -115,7 +116,7 @@ class Loan(models.Model):
     intrest_rate = models.IntegerField()
     payment_due_date = models.DateTimeField()
     loan_balance = models.IntegerField()
-    guaranter = models.ForeignKey(Third_Party,on_delete=models.CASCADE,null=True) 
+    guaranter = models.ForeignKey(ThirdParty,on_delete=models.CASCADE,null=True) 
 
 
 class Reward(models.Model):

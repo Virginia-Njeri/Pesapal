@@ -1,66 +1,62 @@
 from django.shortcuts import render
-from .forms import RegisterAccount, RegisterCurrency, RegisterCustomer, RegisterLoan, RegisterNotifications, RegisterReceipt, RegisterReward, RegisterThirdParty, RegisterTransactions, Registercard, WalletRegister
+
+from .forms import AccountRegistrationForm, CardRegistrationForm, CurrencyRegistrationForm, CustomerRegistrationForm, LoanRegistrationForm, NotificationsRegistrationForm, RecieptRegistrationForm, RewardRegistrationForm, Third_PartyRegistrationForm, TransactionRegistrationForm, WalletRegistrationForm
+
+
 
 def register_customer(request):
-    vargy=RegisterCustomer()
-    return render(request,"register_customer.html",{"form":vargy})
-
-
-
-def register_account(request):
-    vargy=RegisterAccount()
-    return render(request,"register_wallet.html",{"form":vargy})
-
-
-def register_card(request):
-    vargy=WalletRegister()
-    return render(request,"register_currency.html",{"form":vargy})
-
+    form=CustomerRegistrationForm()
+    return render (request,"wallet/customer.html",
+    {'form':form})
 
 def register_currency(request):
-    vargy=RegisterAccount()
-    return render(request,"register_transaction.html",{"form":vargy})
+    form=CurrencyRegistrationForm()
+    return render(request,"wallet/currency.html",
+    {'form':form})
 
+def register_wallet(request):
+    form=WalletRegistrationForm()
+    return render(request,"wallet/wallet.html",
+    {'form':form})  
 
-def register_loan(request):
-    vargy=RegisterLoan()
-    return render(request,"register_thirdparty.html",{"form":vargy})
-
-
-def register_notifications(request):
-    vargy=RegisterNotifications()
-    return render(request,"register_reward.html",{"form":vargy})
-
-
-def register_receipt(request):
-    vargy=RegisterReceipt()
-    return render(request,"register_notifications.html",{"form":vargy})
-
-def register_reward(request):
-    vargy=RegisterThirdParty()
-    return render(request,"register_loan.html",{"form":vargy})
-
-
-def register_thirdparty(request):
-    vargy=RegisterTransactions()
-    return render(request,"register_card.html",{"form":vargy})
-
+def register_account(request):
+    form=AccountRegistrationForm()
+    return render(request,"wallet/account.html",
+    {'form':form}) 
 
 def register_transaction(request):
-    vargy=Registercard()
-    return render(request,"register_account.html",{"form":vargy})
+    form=TransactionRegistrationForm()
+    return render(request,"wallet/transaction.html",
+    {'form':form}) 
 
-
+def register_notifications(request):
+    form=NotificationsRegistrationForm()
+    return render(request,"wallet/notifications.html",
+    {'form':form})  
 
 def register_card(request):
-    vargy=RegisterCurrency()
-    return render(request,"register_receipts.html",{"form":vargy})                
+    form=CardRegistrationForm()
+    return render(request,"wallet/card.html",
+    {'form':form})
 
+def register_third_party(request):
+    form=Third_PartyRegistrationForm()
+    return render(request,"wallet/thirdparty.html",
+    {'form':form})  
 
+def register_reciept(request):
+    form=RecieptRegistrationForm()
+    return render(request,"wallet/receipt.html",
+    {'form':form})  
 
+def register_loan(request):
+    form=LoanRegistrationForm()
+    return render(request,"wallet/loan.html",
+    {'form':form})  
 
-
-
+def register_reward(request):
+    form=RewardRegistrationForm()
+    return render(request,"wallet/reward.html")
     
 
 
