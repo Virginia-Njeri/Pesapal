@@ -80,18 +80,28 @@ WSGI_APPLICATION = 'digitalwallet.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+# DATABASES = {
+#     'default': {
+#          "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "datab",
+#         "USER": "stensil",
+#         "PASSWORD" :'virgy',
+#         "HOST": "localhost",
+#         "PORT": 5432,
+#         # current project this is ours
+#     }
+# }
+
 DATABASES = {
     'default': {
-         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "datab",
-        "USER": "stensil",
-        "PASSWORD" :'virgy',
-        "HOST": "localhost",
-        "PORT": 5432,
-        # current project this is ours
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'datab',
+        'USER': 'virginia',
+        'PASSWORD': 'virginia',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
-
 
 
 # Password validation
