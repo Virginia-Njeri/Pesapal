@@ -12,23 +12,43 @@
        table th, td  {
           border: 1px solid;
           padding: 10px;
+          
+          
+        }
+        td{
+          color: purple;
+
         }
         
         table {
-          width: 40%;
+          width: 80%;
+          border-collapse: collapse;
+
         }
         </style>
     <table>
-       <th>
-        <td> first name</td>
-        <td>Age</td>
-        <td>Email</td>
-       </th>
+       <tr>
+       
+        <th>Type of loan</th>
+        <th>Loan</th>
+        <th>Gurantor</th>
+        <th>Interest</th>
+
+       </tr>
        {%for loan in loans %}
        <tr>
-        <td>{{customer.first_name}}</td>
-        <td>{{customer.age}}</td>
-        <td>{{customer.email}}</td>
+        <td>{{loan.loan_type}}</td>
+        <td>{{loan.amount}}</td>
+        <td>{{loan.guaranter}}</td>
+        <td>{{loan.intrest_rate}}</td>
+
+
+
+
+       
+
+
+
 
 
        </tr>

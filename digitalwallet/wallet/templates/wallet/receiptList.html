@@ -12,23 +12,51 @@
        table th, td  {
           border: 1px solid;
           padding: 10px;
+          
+          
+        }
+        td{
+          color: purple;
+
         }
         
         table {
-          width: 40%;
+          width: 80%;
+          border-collapse: collapse;
+
         }
         </style>
     <table>
-       <th>
-        <td> first name</td>
-        <td>Age</td>
-        <td>Email</td>
-       </th>
-       {%for receipt in receipt %}
        <tr>
-        <td>{{customer.first_name}}</td>
-        <td>{{customer.age}}</td>
-        <td>{{customer.email}}</td>
+       
+        <th>Type</th>
+        <th>Date</th>
+        <th>File</th>
+        <th>Amount</th>
+
+
+
+
+
+       </tr>
+       {%for receipt in receipts %}
+       <tr>
+        <td>{{receipt.receipt_type}}</td>
+        <td>{{receipt.receipt_date}}</td>
+        <td>{{receipt.receipt_file}}</td>
+        <td>{{receipt.total_amount}}</td>
+
+
+
+        
+
+
+
+
+       
+
+
+
 
 
        </tr>

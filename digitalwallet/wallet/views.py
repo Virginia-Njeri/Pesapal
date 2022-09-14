@@ -105,7 +105,7 @@ def register_Wallet(request):
 
 def list_wallets(request):
     wallets = Wallet.objects.all() 
-    return render  (request,"wallet/walletList.html",{"currency":wallets})
+    return render  (request,"wallet/walletList.html",{"wallets":wallets})
 
 
 
@@ -203,7 +203,7 @@ def register_receipt(request):
 
 def list_receipt(request):
     receipts = Receipt.objects.all() 
-    return render  (request,"wallet/receiptList.html",{"receipt":receipts})
+    return render  (request,"wallet/receiptList.html",{"receipts":receipts})
 
 
 

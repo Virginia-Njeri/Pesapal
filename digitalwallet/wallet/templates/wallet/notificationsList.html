@@ -12,23 +12,47 @@
        table th, td  {
           border: 1px solid;
           padding: 10px;
+          
+          
+        }
+        td{
+          color: purple;
+
         }
         
         table {
-          width: 40%;
+          width: 80%;
+          border-collapse: collapse;
+
         }
         </style>
     <table>
-       <th>
-        <td> first name</td>
-        <td>Age</td>
-        <td>Email</td>
-       </th>
+       <tr>
+       
+        <th>ID</th>
+        <th>Currency</th>
+        <th>Time</th>
+        <th>Status</th>
+
+
+
+
+
+       </tr>
        {%for notification in notifications %}
        <tr>
-        <td>{{customer.first_name}}</td>
-        <td>{{customer.age}}</td>
-        <td>{{customer.email}}</td>
+        <td>{{notification.status}}</td>
+        <td>{{acount.transaction_id}}</td>
+        <td>{{notification.date_time}}</td>
+        <td>{{notification.transaction}}</td>
+
+
+
+
+       
+
+
+
 
 
        </tr>
