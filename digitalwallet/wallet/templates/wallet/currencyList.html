@@ -15,10 +15,6 @@
           
           
         }
-        td{
-          color: purple;
-
-        }
         
         table {
           width: 80%;
@@ -28,36 +24,19 @@
         </style>
     <table>
        <tr>
+        
+        <th>Country</th>
+        <th>Symbol</th>
        
-        <th>ID</th>
-        <th>Currency</th>
-        <th>Time</th>
-        <th>Status</th>
 
 
 
 
 
        </tr>
-       {%for wallet in wallets %}
+       {%for currency in currencys %}
        <tr>
-        <td>{{wallet.customer_id}}</td>
-        <td>{{wallet.currency}}</td>
-        <td>{{wallet.time}}</td>
-        <td>{{wallet.status}}</td>
-
-
-
-
+        <td>{{currency.recipient}}</td>
+        <td>{{currency.points}}</td>
+        
        
-
-
-
-
-
-       </tr>
-       {%endfor%}
-    </table>
-    
-</body>
-</html>

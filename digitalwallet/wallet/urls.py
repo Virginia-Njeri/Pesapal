@@ -20,13 +20,13 @@ urlpatterns=[
     path("currencies/",list_currency,name="currency"),
     path("wallets/",list_wallets,name="listwallets"),
     path("accounts/",list_accounts,name ="list_accounts"),
-    path("transactions/",list_transaction,name="transactions"),
+    path("transactionss/",list_transaction,name="transactions"),
     path("cards/",list_card,name="cards"),
     path("thirdpartys/",list_thirdparty,name="thirdpartys"),
-    path("notifications/",list_notifications,"notifations"),
+    path("notifications/",list_notifications,name="notifations"),
     path("receipts/",list_receipt,name="receipts"),
     path("loans/",list_loan,name= "loans"),
-    path("reward/",list_reward,name="reward")
+    path("rewards/",list_reward,name="reward"),
 
 
 ]

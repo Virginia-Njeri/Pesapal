@@ -89,8 +89,8 @@ def register_currency(request):
     return render(request,"wallet/currency.html", {'form':form} ) 
 
 def list_currency(request):
-    currency = Currency.objects.all() 
-    return render  (request,"wallet/currencyList.html",{"currency":currency})
+    currencys = Currency.objects.all() 
+    return render  (request,"wallet/currencyList.html",{"currencys":currencys})
      
     
 
@@ -104,8 +104,8 @@ def register_Wallet(request):
     return render(request,"wallet/wallet.html", {'form':form} ) 
 
 def list_wallets(request):
-    currency = Wallet.objects.all() 
-    return render  (request,"wallet/walletList.html",{"currency":currency})
+    wallets = Wallet.objects.all() 
+    return render  (request,"wallet/walletList.html",{"currency":wallets})
 
 
 
@@ -122,8 +122,8 @@ def register_Account(request):
     return render(request,"wallet/account.html", {'form':form} ) 
 
 def list_accounts(request):
-    currency = Account.objects.all() 
-    return render  (request,"wallet/accountList.html",{"currency":currency})
+    accounts = Account.objects.all() 
+    return render  (request,"wallet/accountList.html",{"accounts":accounts})
 
 
 
@@ -137,8 +137,8 @@ def register_transaction(request):
     return render(request,"wallet/transaction.html", {'form':form} ) 
 
 def list_transaction(request):
-    transaction = Transaction.objects.all() 
-    return render (request,"wallet/transactionList.html",{"transaction":transaction})
+    transactions = Transaction.objects.all() 
+    return render (request,"wallet/transactionList.html",{"transaction":transactions})
 
 
 
@@ -171,8 +171,8 @@ def register_thirdparty(request):
     return render(request,"wallet/thirdparty.html", {'form':form} ) 
 
 def list_thirdparty(request):
-    thirdparty = ThirdParty.objects.all() 
-    return render  (request,"wallet/walletList.html",{"thirdparty":thirdparty})
+    thirdpartys = ThirdParty.objects.all() 
+    return render  (request,"wallet/walletList.html",{"thirdparty":thirdpartys})
 
 
 
@@ -202,8 +202,8 @@ def register_receipt(request):
     return render(request,"wallet/receipt.html", {'form':form} ) 
 
 def list_receipt(request):
-    receipt = Receipt.objects.all() 
-    return render  (request,"wallet/receiptList.html",{"receipt":receipt})
+    receipts = Receipt.objects.all() 
+    return render  (request,"wallet/receiptList.html",{"receipt":receipts})
 
 
 
@@ -236,7 +236,7 @@ def register_reward(request):
 
 def list_reward(request):
     rewards = Reward.objects.all() 
-    return render (request,"wallet/rewardList.html",{"reward":rewards})    
+    return render (request,"wallet/rewardList.html",{"rewards":rewards})    
 
 
 
