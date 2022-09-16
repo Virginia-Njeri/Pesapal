@@ -59,7 +59,7 @@ class Account(models.Model):
 
 class Transaction(models.Model):
     transaction_code = models.CharField(max_length=30,null=True)
-    wallet = models.ForeignKey(Wallet, on_delete=models.CASCADE)
+    wallet= models.ForeignKey(Wallet, on_delete=models.CASCADE)
     transaction_amount = models.IntegerField()
     transaction_type = models.CharField(max_length=30)
     transaction_charge = models.IntegerField()

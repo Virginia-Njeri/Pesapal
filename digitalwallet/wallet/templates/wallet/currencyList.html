@@ -12,13 +12,19 @@
        table th, td  {
           border: 1px solid;
           padding: 10px;
+         
           
-          
+ 
+        }
+        th{
+          background-color: rgb(95, 22, 163);
+          color: aliceblue;
         }
         
         table {
           width: 80%;
           border-collapse: collapse;
+          margin-left: 10%;
 
         }
         </style>
@@ -30,13 +36,17 @@
        
 
 
-
-
-
+       
        </tr>
        {%for currency in currencys %}
        <tr>
-        <td>{{currency.recipient}}</td>
-        <td>{{currency.points}}</td>
-        
+        <td>{{currency.country}}</td>
+        <td>{{currency.symbol}}</td>
+       
+      </tr>
+      {%endfor%}
+   </table>
+   
+</body>
+</html>
        

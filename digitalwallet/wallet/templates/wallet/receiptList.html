@@ -15,14 +15,16 @@
           
           
         }
-        td{
-          color: purple;
+      
+        th{
+          background-color: rgb(86, 21, 147);
+          color: white;
 
         }
-        
         table {
           width: 80%;
           border-collapse: collapse;
+          margin-left: 10%;
 
         }
         </style>
@@ -41,9 +43,9 @@
        </tr>
        {%for receipt in receipts %}
        <tr>
-        <td>{{receipt.receipt_type}}</td>
-        <td>{{receipt.receipt_date}}</td>
-        <td>{{receipt.receipt_file}}</td>
+        <td>{{receipt.name}}</td>
+        <td>{{receipt.transaction_account}}</td>
+        <td>{{receipt.type}}</td>
         <td>{{receipt.total_amount}}</td>
 
 

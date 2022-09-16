@@ -33,18 +33,13 @@
         <th>Currency</th>
         <th>Time</th>
         <th>Status</th>
-
-
-
-
-
        </tr>
-       {%for notification in notifications %}
+       {%for not in notifications%}
        <tr>
-        <td>{{notification.status}}</td>
-        <td>{{acount.transaction_id}}</td>
-        <td>{{notification.date_time}}</td>
-        <td>{{notification.transaction}}</td>
+        <td>{{not.name}}</td>
+        <td>{{not.transactions}}</td>
+        <td>{{not.type}}</td>
+        <td>{{not.transaction_type}}</td>
 
 
 

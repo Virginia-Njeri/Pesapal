@@ -19,28 +19,47 @@
         table {
           width: 80%;
           border-collapse: collapse;
+          margin-left: 10%;
 
+        }
+        th{
+          background-color: rgb(92, 21, 159);
+          color: white;
         }
         </style>
     <table>
        <tr>
         
-        <th>Country</th>
+        <th>Issuer</th>
         <th>Symbol</th>
         <th>Symbol</th>
         <th>Symbol</th>
+        <th>status</th>
+        <th>Expiry date</th>
 
 
-       
 
 
+
+
+      
+       </tr>
+       {%for card in cards %}
+       <tr>
+        <td>{{card.wallet}}</td>
+        <td>{{card.account}}</td>
+        <td>{{card.issuer}}</td>
+        <td>{{card.card_number}}</td>
+        <td>{{card.card_status}}</td>
+        <td>{{card.expiry_date}}</td>
 
 
 
        </tr>
-       {%for card in cards %}
-       <tr>
-        <td>{{card.issuer}}</td>
-        <td>{{currency.points}}</td>
+       {%endfor%}
+    </table>
+    
+</body>
+</html>
         
        

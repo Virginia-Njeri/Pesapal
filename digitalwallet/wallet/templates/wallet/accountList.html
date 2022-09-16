@@ -19,10 +19,15 @@
           color: purple;
 
         }
+        th{
+          background-color: rgb(86, 11, 155);
+          color: white;
+        }
         
         table {
           width: 80%;
           border-collapse: collapse;
+          margin-left: 10%;
 
         }
         </style>
@@ -31,20 +36,20 @@
        
         <th>ID</th>
         <th>Currency</th>
-        <th>Time</th>
-        <th>Status</th>
+        <th>Name</th>
+        <th>Wallet</th>
 
 
 
 
 
        </tr>
-       {%for account in accounts %}
+       {%for acount in accounts %}
        <tr>
-        <td>{{account.account_number}}</td>
-        <td>{{acount.currency}}</td>
-        <td>{{account.time}}</td>
-        <td>{{account.status}}</td>
+        <td>{{acount.account_number}}</td>
+        <td>{{acount.account_type}}</td>
+        <td>{{acount.name}}</td>
+        <td>{{acount.wallet}}</td>
 
 
 

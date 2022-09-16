@@ -19,10 +19,15 @@
           color: purple;
 
         }
+        th{
+          background-color: rgb(107, 20, 189);
+          color: white;
+        }
         
         table {
           width: 80%;
           border-collapse: collapse;
+          margin-left: 10%;
 
         }
         </style>
@@ -31,7 +36,13 @@
        
         <th>Origin account</th>
         <th>Receipt</th>
-        <th>Destination</th>
+        <th>Wallet</th>
+        <th>Time</th>
+        <th>Sender</th>
+        <th>Charges</th>
+
+
+
 
 
 
@@ -41,8 +52,14 @@
        {%for transaction in transactions %}
        <tr>
         <td>{{transaction.origin_account}}</td>
-        <td>{{transaction.receipt}}</td>
-        <td>{{transaction.destination}}</td>
+        <td>{{transaction.reciept}}</td>
+        <td>{{transaction.wallet}}</td>
+        <td>{{transaction.transaction_time}}</td>
+        <td>{{transaction.origin_account}}</td>
+        <td>{{transaction.transaction_charge}}</td>
+
+
+
 
 
 

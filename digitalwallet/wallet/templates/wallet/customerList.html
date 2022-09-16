@@ -12,23 +12,48 @@
        table th, td  {
           border: 1px solid;
           padding: 10px;
+          margin-left: 10%;
+
           
           
+        }
+        td{
+          color: purple;
+
+        }
+        th{
+          background-color: rgb(99, 20, 174);
+          color: white;
         }
         
         table {
           width: 80%;
           border-collapse: collapse;
+          margin-left: 10%;
 
         }
         </style>
     <table>
        <tr>
-        
-        <th>Country</th>
-        <th>Symbol</th>
-        <th>Symbol</th>
-        <th>Symbol</th>
+       
+        <th>Name </th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Address</th>
+
+
+
+
+
+       </tr>
+       {%for customer in customers %}
+       <tr>
+        <td>{{customer.first_name}}</td>
+        <td>{{customer.gender}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.address}}</td>
+
+
 
 
        
@@ -40,9 +65,9 @@
        </tr>
        {%endfor%}
     </table>
-    </html>
     
-
+</body>
+</html>
 
 
 

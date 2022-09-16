@@ -74,8 +74,8 @@ def register_customer(request):
     return render(request,"wallet/customer.html", {'form':form} ) 
 
 def list_customer(request):
-    customer = Customer.objects.all() 
-    return render  (request,"wallet/customerList.html",{"customers":customer})                 
+    customers = Customer.objects.all() 
+    return render  (request,"wallet/customerList.html",{"customers":customers})                 
 
 
 
@@ -90,7 +90,7 @@ def register_currency(request):
 
 def list_currency(request):
     currencys = Currency.objects.all() 
-    return render  (request,"wallet/currencyList.html",{"currencys":currencys})
+    return render (request,"wallet/currencyList.html",{"currencys":currencys})
      
     
 
@@ -138,7 +138,7 @@ def register_transaction(request):
 
 def list_transaction(request):
     transactions = Transaction.objects.all() 
-    return render (request,"wallet/transactionList.html",{"transaction":transactions})
+    return render(request,"wallet/transactionsList.html",{"transactions":transactions})
 
 
 
@@ -157,7 +157,7 @@ def register_card(request):
 
 def list_card(request):
     cards = Card.objects.all() 
-    return render  (request,"wallet/cardList.html",{"cards":cards})    
+    return render(request,"wallet/cardList.html",{"cards":cards})    
 
 
 
@@ -187,8 +187,8 @@ def register_Notifications(request):
     return render(request,"wallet/notifications.html", {'form':form} ) 
 
 def list_notifications(request):
-    notifications = Notifications.objects.all() 
-    return render  (request,"wallet/notificationsList.html",{"notifications":notifications})
+    nots = Notifications.objects.all() 
+    return render(request,"wallet/notificationsList.html",{"nots":nots})
 
 
 
