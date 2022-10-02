@@ -40,11 +40,7 @@
         <th>Gender</th>
         <th>Email</th>
         <th>Address</th>
-
-
-
-
-
+        <th>profile</th>
        </tr>
        {%for customer in customers %}
        <tr>
@@ -52,6 +48,8 @@
         <td>{{customer.gender}}</td>
         <td>{{customer.email}}</td>
         <td>{{customer.address}}</td>
+        <td><a href="{%url'customer_profile'id=customer.id%}">
+          view profile </a>
 
 
 

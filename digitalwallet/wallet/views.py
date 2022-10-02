@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from urllib import request
+from django.shortcuts import render,redirect
 from .models import Account, Card, Currency, Customer, Loan, Notifications, Receipt, Reward, ThirdParty, Transaction, Wallet
 
 from .forms import AccountRegistrationForm, CardRegistrationForm, CurrencyRegistrationForm, CustomerRegistrationForm, LoanRegistrationForm, NotificationsRegistrationForm, RecieptRegistrationForm, RewardRegistrationForm, Third_PartyRegistrationForm, TransactionRegistrationForm, WalletRegistrationForm
@@ -72,6 +73,7 @@ def register_customer(request):
     else :
         form = CustomerRegistrationForm()
     return render(request,"wallet/customer.html", {'form':form} ) 
+    
 
 def list_customer(request):
     customers = Customer.objects.all() 
@@ -238,6 +240,21 @@ def list_reward(request):
     rewards = Reward.objects.all() 
     return render (request,"wallet/rewardList.html",{"rewards":rewards})    
 
+def customer_profile (request,id):
+    customer = Customer.objects.get(id=id)
+    return render(request,"wallet/customer_profile.html",{"customer":customer})
+
+
+def edit_profile(request,id):
+    customer = Customer.objects.get(id=id)
+    if request.method == "POST":
+        form = CustomerRegistrationForm(request.POST, instance=customer)
+        if form.is_valid():
+            form.save()
+            return redirect("customer_profile", id = customer.id)
+    else:
+            form = CustomerRegistrationForm(instance=customer)
+            return render(request, "wallet/edit_profile.html", {"form": form})
 
 
 
