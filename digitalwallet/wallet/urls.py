@@ -1,7 +1,7 @@
 
 
 from django.urls import path 
-from .views import customer_profile, edit_profile, list_accounts, list_card, list_currency, list_customer, list_loan, list_notifications, list_receipt, list_reward, list_thirdparty, list_transaction, list_wallets, register_account, register_card, register_currency, register_loan, register_notifications, register_reciept, register_reward, register_third_party, register_transaction, register_wallet, register_customer
+from .views import account_profile, card_profile, customer_profile, edit_account, edit_card, edit_profile, edit_receipt, edit_transaction, edit_wallet, list_accounts, list_card, list_currency, list_customer, list_loan, list_notifications, list_receipt, list_reward, list_thirdparty, list_transaction, list_wallets, receipt_profile, register_account, register_card, register_currency, register_loan, register_notifications, register_reciept, register_reward, register_third_party, register_transaction, register_wallet, register_customer, transaction_profile, wallet_profile
 
 urlpatterns=[
     path("register/",register_customer,name="registration"),
@@ -27,10 +27,20 @@ urlpatterns=[
     path("receipts/",list_receipt,name="receipts"),
     path("loans/",list_loan,name= "loans"),
     path("rewards/",list_reward,name="reward"),
+
+    
     path("customers/<int:id>/",customer_profile,name="customer"),
-    path("profile/edit/<int:id>/",edit_profile,name="profile")
-
-
+    path("profile/edit/<int:id>/",edit_profile,name="profile"),
+    path("wallets/<int:id>/",wallet_profile,name="wallet_profile"),
+    path("wallets/edit/<int:id>/",edit_wallet,name="edit_wallet"),
+    path("accounts/<int:id>/",account_profile,name="account_profile"),
+    path("accounts/edit/<int:id>/",edit_account,name="edit_account"),
+    path("cards/<int:id>/",card_profile,name="card_profile"),
+    path("cards/edit/<int:id>/",edit_card,name="edit_account"),
+    path("transactions/<int:id>/",transaction_profile,name="transaction_profile"),
+    path("transactions/edit/<int:id>/",edit_transaction,name="edit_transaction"),
+    path("receipts/<int:id>/",receipt_profile,name="receipt_profile"),
+    path("receipts/edit/<int:id>/",edit_receipt,name="edit_receipt"),
 
 ]
 

@@ -48,16 +48,8 @@
         <td>{{customer.gender}}</td>
         <td>{{customer.email}}</td>
         <td>{{customer.address}}</td>
-        <td><a href="{%url'customer_profile'id=customer.id%}">
-          view profile </a>
-
-
-
-
-       
-
-
-
+        <td><a href=" {% url 'customer_profile' id=customer.id %}">
+ 
 
 
        </tr>
