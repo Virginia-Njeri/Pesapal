@@ -29,7 +29,7 @@ urlpatterns=[
     path("rewards/",list_reward,name="reward"),
 
     
-    path("customers/<int:id>/",customer_profile,name="customer"),
+    path("customers/<int:id>/",customer_profile,name="customer_profile"),
     path("profile/edit/<int:id>/",edit_profile,name="profile"),
     path("wallets/<int:id>/",wallet_profile,name="wallet_profile"),
     path("wallets/edit/<int:id>/",edit_wallet,name="edit_wallet"),
