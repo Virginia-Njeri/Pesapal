@@ -43,6 +43,9 @@ class NotificationsSerializer(serializers.ModelSerializer):
         fields=("transaction","transaction_id","customer_id","status")  
 
 
+        
+
+
     
 
 

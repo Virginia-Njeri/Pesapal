@@ -6,6 +6,12 @@ from .forms import AccountRegistrationForm, CardRegistrationForm, CurrencyRegist
 
 
 
+
+
+
+
+
+
 def register_customer(request):
     form=CustomerRegistrationForm()
     return render (request,"wallet/customer.html",
@@ -343,6 +349,17 @@ def edit_receipt(request,id)  :
     else:
             form=RecieptRegistrationForm(instance=receipt)
             return render(request,"edit_receipt.html",{"form":form})
+
+
+
+
+
+
+
+
+
+
+
 
 
 
